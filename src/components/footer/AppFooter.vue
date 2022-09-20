@@ -40,7 +40,7 @@
       </v-row>
 
       <div
-        data-aos="zoom-in-up"
+        data-aos="zoom-in-down"
         data-aos-duration="900"
         aria-describedby="Informações para contato"
         class="mt-10"
