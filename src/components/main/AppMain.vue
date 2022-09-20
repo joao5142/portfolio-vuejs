@@ -353,7 +353,7 @@ export default {
         },
 
         {
-          label: "Stack Tecnologico",
+          label: "Stack Tecnológico",
           itens: [
             {
               description: "Aws",
