@@ -29,6 +29,9 @@
 <img margin-bottom="20px" src="src/assets/readme1.PNG">
 <hr/>
 <img margin-bottom="20px" src="src/assets/readme2.PNG">
+
+<h4  style="display: inline_block">Visualização no Figma :</h4><a style="display: inline_block" target="blank" href="https://www.figma.com/file/jdcVu1AMtxcaTEAOaiyWCu/portfolio?node-id=4%3A76">Preview no Figma</a>
+
 <h4  style="display: inline_block">Visualização do site :</h4><a style="display: inline_block" target="blank" href="https://portfoliocarlosteste.netlify.app/">Preview no Netlify</a>
 
 <h2>🧑🏻‍ Autor</h2>
