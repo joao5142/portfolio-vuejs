@@ -1,5 +1,5 @@
 <h1>Portfolio desenvolvido com Vue js</h1>
-<h4>🚀 Projeto Portfolio desenvolvido com Vue.js</h4>
+<h4>🚀 Projeto Portfolio desenvolvido com Vue.js e Figma</h4>
 
 <h2>🚧 Status do projeto</h2>
 <p>Em Progresso</p>
