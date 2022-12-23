@@ -43,7 +43,7 @@ export default {
         {
           name: "Matheus Costa",
           position: "Desenvolvedor Back-end",
-          avatar: "https://cdn.vuetifyjs.com/images/john.jpg",
+          avatar: "/static/users/user3.jpg",
         },
       ],
       interval: null,
