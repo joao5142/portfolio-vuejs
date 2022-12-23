@@ -25,9 +25,16 @@ export default {
 
   @media (max-width: 400px) {
     max-width: 95%;
+    margin: 0 auto;
   }
   @media (min-width: 1800px) {
-    max-width: 1602px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 2500px) {
+    max-width: 1800px;
+    margin: 0 auto;
   }
 }
 .base-card {

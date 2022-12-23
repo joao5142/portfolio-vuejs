@@ -60,6 +60,14 @@ export default {};
       height: 50px;
       object-fit: cover;
     }
+
+    &:first-child {
+      margin-left: auto;
+    }
+
+    &:last-child {
+      margin-right: auto;
+    }
   }
 }
 </style>
