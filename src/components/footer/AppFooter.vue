@@ -3,8 +3,8 @@
     <div class="container">
       <h3>Vamos Bater um Papo!</h3>
 
-      <v-row class="mt-15">
-        <v-col md="6">
+      <v-row class="mt-15 mb-15 mb-md-0">
+        <v-col cols="12" md="6">
           <form class="form" @submit.prevent action="">
             <input
               class="form__field"
@@ -22,8 +22,12 @@
             <button class="form__button" type="submit">Enviar</button>
           </form>
         </v-col>
-        <v-col md="6" class="d-flex align-center">
-          <v-img src="/static/cell-phone.svg" />
+        <v-col cols="12" md="6" class="d-none d-md-flex align-center">
+          <img
+            style="max-width: 100%"
+            src="/static/cell-phone.svg"
+            alt="cellphone"
+          />
         </v-col>
       </v-row>
 
