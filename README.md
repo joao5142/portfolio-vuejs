@@ -26,7 +26,7 @@
 </div>
 
 <h2>🖼️ Demonstração da aplicação</h2>
-<img margin-bottom="20px" src="src/assets/readme1.PNG">
+<img margin-bottom="20px" src="src/assets/readme3.PNG">
 <hr/>
 <img margin-bottom="20px" src="src/assets/readme2.PNG">
 
