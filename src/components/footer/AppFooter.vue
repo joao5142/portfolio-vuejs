@@ -1,19 +1,11 @@
 <template>
   <footer>
     <div class="container">
-      <h3 data-aos="fade-left" data-aos-duration="900" class="text-center">
-        Vamos Bater um Papo!
-      </h3>
+      <h3>Vamos Bater um Papo!</h3>
 
       <v-row class="mt-15">
         <v-col md="6">
-          <form
-            data-aos="zoom-in-up"
-            data-aos-duration="900"
-            class="form"
-            @submit.prevent
-            action=""
-          >
+          <form class="form" @submit.prevent action="">
             <input
               class="form__field"
               placeholder="Informe seu email"
@@ -31,21 +23,12 @@
           </form>
         </v-col>
         <v-col md="6" class="d-flex align-center">
-          <v-img
-            data-aos="zoom-in-down"
-            data-aos-duration="900"
-            src="/static/cell-phone.svg"
-          />
+          <v-img src="/static/cell-phone.svg" />
         </v-col>
       </v-row>
 
-      <div
-        data-aos="zoom-in-down"
-        data-aos-duration="900"
-        aria-describedby="Informações para contato"
-        class="mt-10"
-      >
-        <h4 class="text-center">carlos.teste@example.com</h4>
+      <div aria-describedby="Informações para contato" class="mt-10">
+        <h4 class="text-center">joão.teste@example.com</h4>
 
         <div
           class="socials-container"
@@ -119,5 +102,11 @@ footer {
   margin-top: 15px;
   gap: 20px;
   justify-content: center;
+}
+
+@media (max-width: 400px) {
+  h4 {
+    font-size: 1.2rem;
+  }
 }
 </style>

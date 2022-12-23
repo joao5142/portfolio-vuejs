@@ -139,5 +139,12 @@ export default {
   &__chevron-left {
     left: -40px;
   }
+
+  @media (max-width: 400px) {
+    & {
+      width: 94%;
+      height: 150px;
+    }
+  }
 }
 </style>

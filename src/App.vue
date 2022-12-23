@@ -20,13 +20,23 @@ export default {
 
 <style lang="scss">
 .container {
-  max-width: 70%;
+  max-width: 80%;
   margin: 0 auto;
+
+  @media (max-width: 400px) {
+    max-width: 95%;
+  }
+  @media (min-width: 1800px) {
+    max-width: 1602px;
+  }
 }
 .base-card {
   border-radius: $border-radius;
   color: $gray-10;
   background-color: $white-1;
   padding: 20px;
+}
+
+@media (max-width: 400px) {
 }
 </style>

@@ -4,31 +4,35 @@
       <v-col md="6" class="d-flex justify-center align-center">
         <div>
           <h1 data-aos="zoom-in" data-aos-duration="1000" class="header__title">
-            Olá ,Sou<br />Carlos Lima
+            Olá ,Sou<br />João Paulo
           </h1>
-          <h4 data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000">
-            Po, Pm e Especialista em EDTECH
+          <h4
+            class="mb-3"
+            data-aos="zoom-in"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+          >
+            Desenvolvedor Front-end
           </h4>
           <div
             data-aos="zoom-in"
-            data-aos-delay="500"
             data-aos-duration="1000"
             class="header__socials"
             aria-describedby="Redes Sociais"
           >
-            <a href="" title="Linkedin Icone">
+            <a aria-label="Linkedin" title="Linkedin Icone">
               <linkedin-icon />
             </a>
-            <a href="" title="Email Icone">
+            <a aria-label="Email" title="Email Icone">
               <email-icon />
             </a>
-            <a href="" title="Facebook Icone">
+            <a aria-label="Facebook" title="Facebook Icone">
               <facebook-icon />
             </a>
           </div>
         </div>
       </v-col>
-      <v-col md="6" class="d-flex justify-center"
+      <v-col cols="12" md="6" class="d-flex justify-center"
         ><v-img
           data-aos="zoom-in"
           data-aos-delay="500"
@@ -92,6 +96,29 @@ export default {
     width: 100%;
     height: 2px;
     background-color: $blue-5;
+  }
+
+  @media (max-width: 500px) {
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__avatar {
+      width: 200px;
+      height: 200px;
+      max-width: 200px;
+      max-height: 200px;
+    }
+    &__decorator {
+      margin-top: 10px;
+      width: 100%;
+      height: 2px;
+      background-color: $blue-5;
+    }
+
+    & {
+      margin-top: 10px;
+    }
   }
 }
 </style>
