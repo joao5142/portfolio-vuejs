@@ -5,24 +5,32 @@
 
       <v-row class="mt-15 mb-15 mb-md-0">
         <v-col cols="12" md="6">
-          <form class="form" @submit.prevent action="">
+          <form ref="form" class="form" @submit.prevent="sendEmail">
             <input
               class="form__field"
               placeholder="Informe seu email"
               type="email"
-              name=""
-              id=""
+              name="user_email"
+              v-model="email"
             />
             <textarea
               class="form__field"
               placeholder="Digite aqui a mensagem que você deseja enviar"
+              name="message"
+              id="message"
+              v-model="message"
             >
             </textarea>
 
             <button class="form__button" type="submit">Enviar</button>
           </form>
         </v-col>
-        <v-col cols="12" md="6" class="d-none d-md-flex align-center">
+        <v-col
+          cols="12"
+          md="6"
+          class="d-none d-md-flex align-center"
+          title="Imagem Celular"
+        >
           <img
             style="max-width: 100%"
             src="/static/cell-phone.svg"
@@ -31,26 +39,39 @@
         </v-col>
       </v-row>
 
-      <div aria-describedby="Informações para contato" class="mt-10">
-        <h4 class="text-center">joão.teste@example.com</h4>
+      <div aria-label="Informações para contato" class="mt-10">
+        <h4 class="text-center">joaopauloneto3687@gmail.com</h4>
 
         <div
           class="socials-container"
-          aria-describedby="Redes Sociais"
+          aria-label="Redes Sociais"
           role="navigation"
         >
-          <a href="" title="Linkedin Icone">
+          <a
+            title="Linkedin Icone"
+            href="https://linkedin.com/in/joão-paulo-8b38b8254"
+            target="_blank"
+          >
             <linkedin-icon color="#fff" />
           </a>
-          <a href="" title="Email Icone">
+          <a
+            title="Email Icone"
+            href="mailto:joaopauloneto3687@gmail.com"
+            target="_blank"
+          >
             <email-icon color="#fff" />
           </a>
-          <a href="" title="Facebook Icone">
+          <a
+            href="linkedin.com/in/joão-paulo-8b38b8254"
+            target="_blank"
+            title="Facebook Icone"
+          >
             <facebook-icon color="#fff" />
           </a>
         </div>
       </div>
     </div>
+    <Loading :is-loading="isLoading" />
   </footer>
 </template>
 
@@ -58,9 +79,61 @@
 import EmailIcon from "../icons/EmailIcon.vue";
 import FacebookIcon from "../icons/FacebookIcon.vue";
 import LinkedinIcon from "../icons/LinkedinIcon.vue";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
+import Loading from "../loading/Loading.vue";
+
+const emailPublicKey = process.env.VUE_APP_EMAIL_KEY;
+const emailServiceId = process.env.VUE_APP_EMAIL_SERVICE_ID;
+const emailTemplateId = process.env.VUE_APP_EMAIL_TEMPLATE_ID;
+
 export default {
   name: "AppFooter",
-  components: { EmailIcon, FacebookIcon, LinkedinIcon },
+  components: { EmailIcon, FacebookIcon, LinkedinIcon, Loading },
+
+  data() {
+    return {
+      email: "",
+      message: "",
+      isLoading: false,
+    };
+  },
+
+  methods: {
+    clearFormEmail() {
+      this.email = "";
+      this.message = "";
+    },
+    async sendEmail() {
+      console.log(emailPublicKey, emailServiceId);
+      try {
+        this.isLoading = true;
+
+        let response = await emailjs.sendForm(
+          emailServiceId,
+          emailTemplateId,
+          this.$refs.form,
+          emailPublicKey
+        );
+        if (response.status == 200) {
+          Swal.fire({
+            icon: "success",
+            title: "Mensagem Enviada !",
+            text: "Sucesso ao enviar mensagem",
+          });
+
+          this.clearFormEmail();
+        }
+      } catch (err) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Algo  deu errado! Tente novamente mais tarde.",
+        });
+      }
+      this.isLoading = false;
+    },
+  },
 };
 </script>
 

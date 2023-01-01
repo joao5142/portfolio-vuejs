@@ -17,40 +17,58 @@ h3 {
 h4 {
   font-size: $heading-4;
 }
-h5{
- font-size: $heading-5;
+h5 {
+  font-size: $heading-5;
 }
 a {
   text-decoration: none;
   color: $blue-2;
 }
-body{
-   @include customScroll($blue-4);
+body {
+  @include customScroll($blue-4);
 }
 
 // #Reset VUETIFY
 // uso do important para sobrescrever os estilo inline e mais especificos,que o vuetify aplica
-  .v-tabs-slider,.v-tabs-slider-wrapper {
-    height: 4px !important; 
-    background-color: $blue-2;
-    border-radius: 10px;
-  }
-  .v-tabs{
-    margin-left: 0px !important;
-    left:0px;
-  }
-  .v-application--is-ltr .v-tabs--align-with-title > .v-tabs-bar:not(.v-tabs-bar--show-arrows):not(.v-slide-group--is-overflowing) > .v-slide-group__wrapper > .v-tabs-bar__content > .v-tab:first-child, .v-application--is-ltr .v-tabs--align-with-title > .v-tabs-bar:not(.v-tabs-bar--show-arrows):not(.v-slide-group--is-overflowing) > .v-slide-group__wrapper > .v-tabs-bar__content > .v-tabs-slider-wrapper + .v-tab{
-      margin-left: 0px !important;
-
- 
-  }
-  .v-tab:nth-child(1){
-      padding-left: 0px !important;
-      
-  }
-  .v-tabs:not(.v-tabs--vertical):not(.v-tabs--right) > .v-slide-group--is-overflowing.v-tabs-bar--is-mobile:not(.v-slide-group--has-affixes) .v-slide-group__prev{
-    display: none;
-  }
-  .v-dialog {
+.v-tabs-slider,
+.v-tabs-slider-wrapper {
+  height: 4px !important;
+  background-color: $blue-2;
+  border-radius: 10px;
+}
+.v-tabs {
+  margin-left: 0px !important;
+  left: 0px;
+}
+.v-application--is-ltr
+  .v-tabs--align-with-title
+  > .v-tabs-bar:not(.v-tabs-bar--show-arrows):not(
+    .v-slide-group--is-overflowing
+  )
+  > .v-slide-group__wrapper
+  > .v-tabs-bar__content
+  > .v-tab:first-child,
+.v-application--is-ltr
+  .v-tabs--align-with-title
+  > .v-tabs-bar:not(.v-tabs-bar--show-arrows):not(
+    .v-slide-group--is-overflowing
+  )
+  > .v-slide-group__wrapper
+  > .v-tabs-bar__content
+  > .v-tabs-slider-wrapper
+  + .v-tab {
+  margin-left: 0px !important;
+}
+.v-tab:nth-child(1) {
+  padding-left: 0px !important;
+}
+.v-tabs:not(.v-tabs--vertical):not(.v-tabs--right)
+  > .v-slide-group--is-overflowing.v-tabs-bar--is-mobile:not(
+    .v-slide-group--has-affixes
+  )
+  .v-slide-group__prev {
+  display: none;
+}
+.v-dialog {
   border-radius: $border-radius !important;
-  }
+}

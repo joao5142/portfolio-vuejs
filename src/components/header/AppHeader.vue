@@ -18,7 +18,7 @@
             data-aos="zoom-in"
             data-aos-duration="1000"
             class="header__socials"
-            aria-describedby="Redes Sociais"
+            title="Redes Sociais"
           >
             <a aria-label="Linkedin" title="Linkedin Icone">
               <linkedin-icon />
@@ -40,7 +40,7 @@
           width="326"
           height="326"
           class="header__avatar"
-          src="https://img.freepik.com/free-photo/young-handsome-man-posing_144627-28081.jpg?w=1380&t=st=1662772114~exp=1662772714~hmac=31b4bca73e4c5159d2f03769ada4d194bd96de2c390e3f5368383bbc123417f6"
+          src="/static/me.jfif"
         ></v-img
       ></v-col>
     </v-row>

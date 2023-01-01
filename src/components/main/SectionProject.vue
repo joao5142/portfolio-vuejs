@@ -1,7 +1,7 @@
 <template>
   <section class="container section-projects">
     <h3>Projetos</h3>
-    <p class="mb-8">Total de projetos: 15</p>
+    <p class="mb-8">Total de projetos: 6</p>
     <v-tabs v-model="selectedTabProjects" align-with-title>
       <v-tab v-for="(tab, index) in projectItems" :key="'projectTab' + index">
         {{ tab.label }}
@@ -16,30 +16,26 @@
             <v-col
               cols="12"
               sm="12"
-              md="6"
-              lg="4"
+              md="3"
+              lg="3"
               v-for="(card, cardIndex) in item.itens"
               :key="'cardIndex' + cardIndex"
               class="section-projects__col-card ps-0 pe-4"
             >
               <div
                 class="section-projects__card"
-                aria-describedby="Card Projeto"
+                aria-label="Card Projeto"
                 title="Card Projeto"
               >
-                <v-img
-                  max-width="80px"
-                  src="https://img.freepik.com/free-vector/organizing-projects-concept-illustration_114360-542.jpg?w=826&t=st=1662774070~exp=1662774670~hmac=cb4fb4e56ada094d7172e1960a7ea7f680ec9299b0665a060aff360aa1d9c059"
-                ></v-img>
+                <v-img :src="card.image"></v-img>
 
                 <div>
-                  <h4>Título</h4>
+                  <h4 class="mb-3">{{ card.title }}</h4>
                   <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Quod, quidem. Totam similique
+                    {{ card.description }}
                   </p>
 
-                  <a @click.prevent="isModalProjectOpen = true">Ver mais </a>
+                  <a @click.prevent="$emit('show-project', card)">Ver mais </a>
                 </div>
               </div>
             </v-col>
@@ -56,15 +52,59 @@ export default {
   data() {
     return {
       selectedTabProjects: 0,
+      isModalProjectOpen: false,
 
       projectItems: [
         {
           label: "Front-end",
-          itens: ["teste 123", "teste 123", "teste 123", "teste 123"],
+          itens: [
+            {
+              title: "Naped",
+              image: "/static/projetos/1.png",
+              description: "Desenvolvido com React e NextJs",
+              url: "https://naped-animes.vercel.app/",
+              technologies: ["React", "NextJs", "Js", "Seo"],
+            },
+            {
+              title: "Loopstudios",
+              image: "/static/projetos/2.png",
+              description: "Desenvolvido com React e NextJs",
+              url: "https://loop-studios-landing-page-gamma.vercel.app/",
+              technologies: ["React", "NextJs", "Js", "Bootstrap"],
+            },
+            {
+              title: "Lol Music Player",
+              image: "/static/projetos/3.png",
+              description: "Desenvolvido com Html,Css e Js",
+              url: "https://lolmusicplayer.netlify.app/",
+              technologies: ["Html", "BEM CSS", "WAI-ARIA", "Js", "DOM"],
+            },
+            {
+              title: "Fylo",
+              image: "/static/projetos/4.png",
+              description: "Desenvolvido com React e NextJs",
+              url: "https://fylolandingpagej.netlify.app/",
+              technologies: ["React", "NextJs", "Js", "Bootstrap"],
+            },
+            {
+              title: "Huddle",
+              image: "/static/projetos/5.png",
+              description: "Desenvolvido com React e NextJs",
+              url: "https://frontendmentordesafio1.netlify.app/",
+              technologies: ["React", "NextJs", "Js", "Bootstrap"],
+            },
+            {
+              title: "Rachi",
+              image: "/static/projetos/6.png",
+              description: "Desenvolvido com VueJs",
+              url: "https://desafiorachi.netlify.app/",
+              technologies: ["VueJs", "Js", "Bootstrap"],
+            },
+          ],
         },
-        { label: "Back-end", itens: ["teste 123"] },
-        { label: "Fullstack", itens: ["teste 123"] },
-        { label: "Diversos", itens: ["teste 123"] },
+        { label: "Back-end", itens: [] },
+        { label: "Fullstack", itens: [] },
+        { label: "Diversos", itens: [] },
       ],
     };
   },
@@ -77,10 +117,12 @@ export default {
     border-radius: $border-radius;
     box-shadow: 0px 4px 4px #aeaeae;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+
     gap: 20px;
     padding: 20px;
     width: 100%;
+    height: 100%;
 
     transition: all 0.1s ease-in-out;
   }

@@ -14,59 +14,30 @@
       </div>
       <div class="modal__content">
         <div class="mt-6">
-          <h4>Titulo</h4>
+          <h4>{{ project.title }}</h4>
           <div class="modal__line"></div>
           <h5 class="mt-10 pb-2">Sobre o projeto</h5>
-          <p>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet.
+          <p class="mt-3">
+            {{ project.description }}
           </p>
-          <h5 class="mt-10 pb-2">Minhas Funções</h5>
-          <ul class="d-flex">
-            <div class="me-10" role="group">
-              <li>Função 1</li>
-              <li>Função 2</li>
-            </div>
-            <div role="group">
-              <li>Função 3</li>
-              <li>Função 4</li>
-            </div>
+          <h5 class="mt-8 pb-2">Tecnologias e Conhecimentos</h5>
+          <ul class="d-flex mt-3">
+            <li
+              v-for="(technologie, index) in project.technologies"
+              :key="index + 'technologie'"
+            >
+              {{ technologie }}
+            </li>
           </ul>
 
-          <h5 class="mt-10 pb-2">Equipe</h5>
-          <div class="mt-2">
-            <v-row>
-              <v-col v-for="item in 6" :key="'avatar' + item" cols="3">
-                <div class="d-flex align-center">
-                  <v-avatar size="35">
-                    <img
-                      src="https://cdn.vuetifyjs.com/images/john.jpg"
-                      alt="John"
-                      class="me-2"
-                    />
-                  </v-avatar>
-                  @dayvison
-                </div>
-              </v-col>
-            </v-row>
-          </div>
-          <h5 class="mt-10 pb-2">Quem Acesssa</h5>
-          <ul class="d-flex">
-            <div role="group" class="me-10">
-              <li>Professores</li>
-              <li>Alunos</li>
-            </div>
-            <div role="group">
-              <li>Professores</li>
-              <li>Alunos</li>
-            </div>
-          </ul>
-
-          <h5 class="mt-10 pb-2">Ver Projeto</h5>
-
-          <v-btn class="me-3" dark rounded color="#36B7FF">Acessar web</v-btn>
-          <v-btn dark rounded color="#36B7FF">Acessar mobile</v-btn>
+          <v-btn
+            class="me-3 mt-10"
+            dark
+            rounded
+            color="#36B7FF"
+            @click="viewProject"
+            >Acessar site</v-btn
+          >
         </div>
       </div>
     </div>
@@ -82,11 +53,17 @@ export default {
       type: Boolean,
       validator: (value) => value === true || value === false,
     },
+    project: {
+      type: Object,
+    },
   },
   methods: {
     closeModal() {
       console.log("Close Modal");
       this.funcCloseModal();
+    },
+    viewProject() {
+      window.open(this.project.url, "_blank");
     },
   },
   computed: {
@@ -104,8 +81,12 @@ export default {
   padding: 10px;
   padding-bottom: 30px;
 
-  p,
   li {
+    margin: 0px 20px;
+
+    &:nth-child(1) {
+      margin-left: 0px;
+    }
   }
   &__content {
     padding: 20px;

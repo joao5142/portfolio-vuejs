@@ -5,12 +5,13 @@
         <v-col md="6">
           <h3 class="mb-5">Sobre mim</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            vulputate libero et velit interdum, ac aliquet odio mattis. Class
-            aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos. Curabitur tempus urna at turpis condimentum
-            lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis
-            condimentum ac, vestibulum eu nisl.
+            Sou uma pessoa que nunca se cansa de buscar conhecimentos novos,
+            sempre estou disposto a ouvir e aprender com outras pessoas. Sendo
+            um profissional que gosta do que faz e com isso busco me tornar cada
+            vez melhor e eficiente. Prezo mais pelo desenvolvimento pessoal,
+            pois soft skills são mais difíceis de obter. Também gosto de
+            compartilhar meus conhecimentos e ser aquilo que eu precisava quando
+            estava no começo.
           </p>
         </v-col>
         <v-col md="6" class="d-flex justify-center">
@@ -20,7 +21,12 @@
     </section>
 
     <section-academic-life />
-    <section-project />
+    <section-project
+      @show-project="
+        selectedProject = $event;
+        isModalProjectOpen = true;
+      "
+    />
     <section-events />
     <section-tools />
     <section-recommendations />
@@ -28,6 +34,7 @@
     <ModalProject
       :modal-open="isModalProjectOpen"
       @close-modal="isModalProjectOpen = false"
+      :project="selectedProject"
     />
   </main>
 </template>
@@ -55,6 +62,7 @@ export default {
   data() {
     return {
       isModalProjectOpen: false,
+      selectedProject: null,
     };
   },
 };

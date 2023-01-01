@@ -3,7 +3,7 @@
     <h3 class="mb-10">Ferramentas e metodologias</h3>
 
     <div
-      aria-describedby="Informações Adicionais - Legenda"
+      aria-label="Informações Adicionais - Legenda"
       role="complementary"
       class="d-flex justify-end mb-8"
     >
