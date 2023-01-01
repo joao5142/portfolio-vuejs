@@ -32,7 +32,7 @@
 
 <h4  style="display: inline_block">Visualização no Figma :</h4><a style="display: inline_block" target="blank" href="https://www.figma.com/file/jdcVu1AMtxcaTEAOaiyWCu/portfolio?node-id=4%3A76">Preview no Figma</a>
 
-<h4  style="display: inline_block">Visualização do site :</h4><a style="display: inline_block" target="blank" href="https://portfoliocarlosteste.netlify.app/">Preview no Netlify</a>
+<h4  style="display: inline_block">Visualização do site :</h4><a style="display: inline_block" target="blank" href="https://portfoliojao.netlify.app/">Preview no Netlify</a>
 
 <h2>🧑🏻‍ Autor</h2>
 <p>Feito por João paulo</p>
