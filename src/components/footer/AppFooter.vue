@@ -181,9 +181,9 @@ footer {
   justify-content: center;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   h4 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 </style>
