@@ -20,29 +20,48 @@
             class="header__socials"
             title="Redes Sociais"
           >
-            <a aria-label="Linkedin" title="Linkedin Icone">
+            <a
+              href="https://linkedin.com/in/joão-paulo-8b38b8254"
+              aria-label="Linkedin"
+              title="Linkedin Icone"
+            >
               <linkedin-icon />
             </a>
-            <a aria-label="Email" title="Email Icone">
+            <a
+              href="mailto:joaopauloneto3687@gmail.com"
+              aria-label="Email"
+              title="Email Icone"
+            >
               <email-icon />
             </a>
             <a aria-label="Facebook" title="Facebook Icone">
               <facebook-icon />
             </a>
           </div>
+
+          <v-btn
+            class="mt-7"
+            dark
+            rounded
+            color="#36B7FF"
+            href="/static/arquivos/resume.pdf"
+            target="_blank"
+            >Ver Resume</v-btn
+          >
         </div>
       </v-col>
-      <v-col cols="12" md="6" class="d-flex justify-center"
-        ><v-img
+      <v-col cols="12" md="6" class="d-flex justify-center">
+        <v-img
           data-aos="zoom-in"
           data-aos-delay="500"
           data-aos-duration="1000"
-          width="326"
-          height="326"
+          width="526"
+          height="526"
+          contain
           class="header__avatar"
-          src="/static/me.jfif"
-        ></v-img
-      ></v-col>
+          src="/static/me.png"
+        ></v-img>
+      </v-col>
     </v-row>
     <div class="header__decorator"></div>
   </header>
@@ -55,16 +74,12 @@ import LinkedinIcon from "../icons/LinkedinIcon.vue";
 export default {
   name: "AppHeader",
   components: { EmailIcon, FacebookIcon, LinkedinIcon },
-  data() {
-    return {};
-  },
 };
 </script>
 
 <style lang="scss" scoped>
 .header {
-  margin-top: 200px;
-
+  margin-top: 50px;
   &__socials {
     display: flex;
     gap: 20px;
@@ -87,14 +102,11 @@ export default {
   }
 
   &__avatar {
-    max-width: 326px;
-    max-height: 326px;
-    border-radius: 50%;
+    object-position: center;
   }
   &__decorator {
-    margin-top: 100px;
     width: 100%;
-    height: 2px;
+    height: 4px;
     background-color: $blue-5;
   }
 

@@ -1,10 +1,17 @@
 <template>
   <main>
-    <section class="container">
-      <v-row>
-        <v-col md="6">
+    <section class="container mt-15">
+      <v-row class="d-flex align-center">
+        <v-col
+          cols="12"
+          lg="6"
+          class="d-flex justify-center order-2 order-md-1"
+        >
+          <carousel-projects />
+        </v-col>
+        <v-col cols="12" lg="6">
           <h3 class="mb-5">Sobre mim</h3>
-          <p>
+          <p class="mb-0">
             Sou uma pessoa que nunca se cansa de buscar conhecimentos novos,
             sempre estou disposto a ouvir e aprender com outras pessoas. Sendo
             um profissional que gosta do que faz e com isso busco me tornar cada
@@ -13,9 +20,6 @@
             compartilhar meus conhecimentos e ser aquilo que eu precisava quando
             estava no começo.
           </p>
-        </v-col>
-        <v-col md="6" class="d-flex justify-center">
-          <carousel-about-me />
         </v-col>
       </v-row>
     </section>
@@ -40,24 +44,23 @@
 </template>
 
 <script>
-import CarouselAboutMe from "./CarouselAboutMe.vue";
 import ModalProject from "./ModalProject.vue";
 import SectionAcademicLife from "./SectionAcademicLife.vue";
 import SectionEvents from "./SectionEvents.vue";
 import SectionProject from "./SectionProject.vue";
 import SectionRecommendations from "./SectionRecommendations.vue";
 import SectionTools from "./SectionTools.vue";
+import CarouselProjects from "../main/CarouselProjects.vue";
 
 export default {
   components: {
-    CarouselAboutMe,
     ModalProject,
-
     SectionAcademicLife,
     SectionProject,
     SectionEvents,
     SectionTools,
     SectionRecommendations,
+    CarouselProjects,
   },
   data() {
     return {
@@ -69,6 +72,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.avatar {
+  max-width: 280px;
+  max-height: 280px;
+  border-radius: 50%;
+}
 section {
   margin: 20px auto 100px auto;
 }

@@ -12,15 +12,16 @@
           v-for="(item, tabIndex) in projectItems"
           :key="'itemTab' + tabIndex"
         >
-          <v-row class="pa-4 mt-2 flex-wrap">
+          <v-row class="mt-2 flex-wrap pa-2 py-4">
             <v-col
               cols="12"
-              sm="12"
-              md="3"
-              lg="3"
+              sm="6"
+              md="4"
+              lg="4"
+              xl="3"
               v-for="(card, cardIndex) in item.itens"
               :key="'cardIndex' + cardIndex"
-              class="section-projects__col-card ps-0 pe-4"
+              class="section-projects__col-card"
             >
               <div
                 class="section-projects__card"
@@ -115,7 +116,7 @@ export default {
 .section-projects {
   &__card {
     border-radius: $border-radius;
-    box-shadow: 0px 4px 4px #aeaeae;
+    box-shadow: $shadow;
     display: flex;
     flex-direction: column;
 
@@ -136,11 +137,6 @@ export default {
       flex-direction: column;
       width: 100%;
       max-width: 100%;
-    }
-    &__col-card {
-      width: 100%;
-      max-width: 100%;
-      height: 100%;
     }
   }
 }

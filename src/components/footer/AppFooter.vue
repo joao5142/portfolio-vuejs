@@ -62,7 +62,7 @@
             <email-icon color="#fff" />
           </a>
           <a
-            href="linkedin.com/in/joão-paulo-8b38b8254"
+            href="https://linkedin.com/in/joão-paulo-8b38b8254"
             target="_blank"
             title="Facebook Icone"
           >

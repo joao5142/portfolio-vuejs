@@ -1,25 +1,23 @@
-@mixin customScroll($color:#00A3FF,$mode:"vertical"){
-       /* FIREFOX SCROLL SUPORT */
-        scrollbar-color: $color #e4e4e4;
-        scrollbar-width: 12px;
-     
-    
+@mixin customScroll($color: #00a3ff, $mode: "vertical") {
+  /* FIREFOX SCROLL SUPORT */
+  scrollbar-color: $color #e4e4e4;
+  scrollbar-width: 12px;
 
-        /* SCROLL SUPORT EDGE,CHROME E OPERA */
-        &::-webkit-scrollbar {
-            width: 12px;
-            @if($mode=='horizontal'){
-              height:12px;
-            }
-        }
+  /* SCROLL SUPORT EDGE,CHROME E OPERA */
+  &::-webkit-scrollbar {
+    width: 12px;
+    @if ($mode== "horizontal") {
+      height: 12px;
+    }
+  }
 
-        &::-webkit-scrollbar-track {
-            background: #e4e4e4;
-            border-radius: 20px;
-        }
+  &::-webkit-scrollbar-track {
+    background: #e4e4e4;
+    border-radius: 20px;
+  }
 
-        &::-webkit-scrollbar-thumb {
-            background-color: $color;
-            border-radius: 20px;
-        }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+    border-radius: 20px;
+  }
 }

@@ -1,12 +1,10 @@
 <template>
   <div class="carousel">
-    <v-img
+    <img
       class="carousel__image"
-      width="100%"
-      height="100%"
       :src="photos[selectedPhotoIndex]"
       v-if="showPhoto"
-    ></v-img>
+    />
 
     <div class="carousel__bullets">
       <div
@@ -27,7 +25,7 @@
 
 <script>
 export default {
-  name: "CarouselAboutMe",
+  name: "CarouselProjects",
   data() {
     return {
       carouselInterval: null,
@@ -35,9 +33,12 @@ export default {
       selectedPhotoIndex: 0,
       showPhoto: true,
       photos: [
-        "https://images.unsplash.com/photo-1662622843760-75ebb0d900d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        "https://images.unsplash.com/photo-1600588545434-1bcc100f7d58?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        "https://images.unsplash.com/photo-1662721194158-570344f84260?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "/static/projetos/1.png",
+        "/static/projetos/2.png",
+        "/static/projetos/3.png",
+        "/static/projetos/4.png",
+        "/static/projetos/5.png",
+        "/static/projetos/6.png",
       ],
     };
   },
@@ -103,8 +104,12 @@ export default {
   height: 244px;
   position: relative;
   &__image {
+    object-fit: fill;
+
     border-radius: inherit;
     transition: all 0.7s ease-in-out;
+    min-height: 100%;
+    max-width: 100%;
   }
 
   &__bullets {
@@ -142,7 +147,7 @@ export default {
 
   @media (max-width: 400px) {
     & {
-      width: 94%;
+      width: 90%;
       height: 150px;
     }
   }

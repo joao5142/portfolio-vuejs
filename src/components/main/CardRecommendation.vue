@@ -4,8 +4,7 @@
     aria-label="Recommendation"
     :class="{ 'recommendation--blue': featured }"
   >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
-    libero et velit interdum, ac aliquet odio matt
+    {{ recommendation.message }}
 
     <div
       class="recommendation__box-avatar d-flex flex-column align-center justify-center"
@@ -84,6 +83,12 @@ export default {
       font-weight: 500;
       font-size: 0.8rem;
     }
+  }
+}
+
+@media (max-width: 400px) {
+  .recommendation {
+    padding: 50px 10px;
   }
 }
 </style>

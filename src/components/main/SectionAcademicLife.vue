@@ -1,6 +1,6 @@
 <template>
   <section class="section-academic-life">
-    <h3 class="text-center">Vida Acadêmica</h3>
+    <h3 class="text-center mb-15">Vida Acadêmica</h3>
     <div
       class="container section-academic-life__container-card d-flex"
       aria-label="Container Cards Vida Acadêmica"
@@ -33,20 +33,20 @@ export default {
       certifications: [
         {
           title: "Bacharelado em Ciência da Computação",
-          url: "https://edools-3-production.s3.amazonaws.com/org-6988/school-7227/certificates/enrollment-8146264/course-84414-jvkxd.pdf",
+          url: "/static/arquivos/cco.pdf",
           description: "Graduação em ciência da computação finalizado em 2022",
         },
         {
           title: "CC50 - O Curso de Harvard no brasil",
-          url: "https://edools-3-production.s3.amazonaws.com/org-6988/school-7227/certificates/enrollment-8146264/course-84414-jvkxd.pdf",
+          url: "/static/arquivos/cc50.pdf",
           description: "Introdução a ciência da computação ",
         },
 
         {
           title: "Segurança em Tecnologia da Informação",
-          url: "https://lms.ev.org.br/mpls/Web/Lms/Student/PrintCertificateDialog.aspx?UNrZMLcmJxJ7%2bg6IMrODmkBjaG9OZlnO",
+          url: "/static/arquivos/seguranca.pdf",
           description:
-            "Aspectos fundamentais da segurança em tecnologia da informação e, também, boas práticas para combater riscos, ameaças e ataques virtuais. ",
+            "Aspectos fundamentais da segurança em tecnologia da informação.",
         },
       ],
     };
@@ -56,9 +56,7 @@ export default {
 
 <style lang="scss" scoped>
 .section-academic-life {
-  background: $blue-dark;
-  color: white;
-  padding: 30px;
+  padding: 100px 30px;
 
   &__container-card {
     cursor: grab;
@@ -66,7 +64,7 @@ export default {
     padding-bottom: 20px;
     gap: 100px;
     overflow-x: auto;
-    @include customScroll($blue-1, "horizontal");
+    @include customScroll($blue-5, "horizontal");
 
     &:active {
       cursor: grabbing;
@@ -92,6 +90,8 @@ export default {
     &:last-child {
       margin-right: auto;
     }
+
+    box-shadow: $shadow;
   }
 }
 </style>

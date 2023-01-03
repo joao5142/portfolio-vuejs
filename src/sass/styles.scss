@@ -13,6 +13,13 @@ h2 {
 }
 h3 {
   font-size: $heading-3;
+  position: relative;
+
+  @media (max-width: 450px) {
+    & {
+      font-size: 2rem;
+    }
+  }
 }
 h4 {
   font-size: $heading-4;

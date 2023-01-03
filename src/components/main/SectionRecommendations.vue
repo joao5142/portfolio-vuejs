@@ -31,18 +31,24 @@ export default {
     return {
       recommendations: [
         {
-          name: "João Paulo",
-          position: "Desenvolvedor Front-end",
-          avatar: "/static/users/user1.png",
+          name: "Dayvison Santos de Souza",
+          position: "Product Owner | Analista de Qualidade",
+          message:
+            "João é um cara extremamente competente, atencioso e prestativo. Desempenha um importante papel em nossa equipe e está sempre apto a aprender novos métodos e formas de trabalho, para melhorias nos processos.",
+          avatar: "/static/users/user1.jfif",
         },
         {
           name: "Beatriz Silva",
           position: "Ux/Ui",
+          message:
+            "João é um cara extremamente competente, atencioso e prestativo. Desempenha um importante papel em nossa equipe e está sempre apto a aprender novos métodos e formas de trabalho, para melhorias nos processos.",
           avatar: "/static/users/user2.png",
         },
         {
           name: "Matheus Costa",
           position: "Desenvolvedor Back-end",
+          message:
+            "João é um cara extremamente competente, atencioso e prestativo. Desempenha um importante papel em nossa equipe e está sempre apto a aprender novos métodos e formas de trabalho, para melhorias nos processos.",
           avatar: "/static/users/user3.jpg",
         },
       ],
@@ -69,7 +75,7 @@ export default {
     },
   },
   mounted() {
-    this.interval = setInterval(this.moveRecommendation, 5000);
+    this.interval = setInterval(this.moveRecommendation, 8000);
   },
 };
 </script>
