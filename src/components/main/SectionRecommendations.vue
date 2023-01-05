@@ -38,11 +38,11 @@ export default {
           avatar: "/static/users/user1.jfif",
         },
         {
-          name: "Beatriz Silva",
-          position: "Ux/Ui",
+          name: "Ana Carla Lima",
+          position: "Desenvolvedora Full Stack",
           message:
-            "João é um cara extremamente competente, atencioso e prestativo. Desempenha um importante papel em nossa equipe e está sempre apto a aprender novos métodos e formas de trabalho, para melhorias nos processos.",
-          avatar: "/static/users/user2.png",
+            "João desempenha sua função de forma exemplar, um ótimo profissional para trabalhar em equipe e sempre disposto a repassar seus conhecimentos com excelência e paciência.",
+          avatar: "/static/users/user2.jfif",
         },
         {
           name: "Matheus Costa",

@@ -21,21 +21,28 @@
             title="Redes Sociais"
           >
             <a
+              target="_blank"
               href="https://linkedin.com/in/joão-paulo-8b38b8254"
               aria-label="Linkedin"
-              title="Linkedin Icone"
+              title="Ícone Linkedin"
             >
               <linkedin-icon />
             </a>
             <a
+              target="_blank"
               href="mailto:joaopauloneto3687@gmail.com"
               aria-label="Email"
-              title="Email Icone"
+              title="Ícone Email"
             >
               <email-icon />
             </a>
-            <a aria-label="Facebook" title="Facebook Icone">
-              <facebook-icon />
+            <a
+              target="_blank"
+              href="https://www.instagram.com/joao_paulo.png/"
+              aria-label="Instagram"
+              title="Ícone Instagram"
+            >
+              <instagram-icon />
             </a>
           </div>
 
@@ -69,11 +76,11 @@
 
 <script>
 import EmailIcon from "../icons/EmailIcon.vue";
-import FacebookIcon from "../icons/FacebookIcon.vue";
+import InstagramIcon from "../icons/InstagramIcon.vue";
 import LinkedinIcon from "../icons/LinkedinIcon.vue";
 export default {
   name: "AppHeader",
-  components: { EmailIcon, FacebookIcon, LinkedinIcon },
+  components: { EmailIcon, InstagramIcon, LinkedinIcon },
 };
 </script>
 

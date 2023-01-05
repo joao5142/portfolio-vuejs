@@ -48,25 +48,25 @@
           role="navigation"
         >
           <a
-            title="Linkedin Icone"
+            title="Ícone Linkedin"
             href="https://linkedin.com/in/joão-paulo-8b38b8254"
             target="_blank"
           >
             <linkedin-icon color="#fff" />
           </a>
           <a
-            title="Email Icone"
+            title="Ícone Email"
             href="mailto:joaopauloneto3687@gmail.com"
             target="_blank"
           >
             <email-icon color="#fff" />
           </a>
           <a
-            href="https://linkedin.com/in/joão-paulo-8b38b8254"
+            href="https://www.instagram.com/joao_paulo.png/"
             target="_blank"
-            title="Facebook Icone"
+            title="Ícone Instagram"
           >
-            <facebook-icon color="#fff" />
+            <instagram-icon color="#fff" />
           </a>
         </div>
       </div>
@@ -77,7 +77,8 @@
 
 <script>
 import EmailIcon from "../icons/EmailIcon.vue";
-import FacebookIcon from "../icons/FacebookIcon.vue";
+
+import InstagramIcon from "../icons/InstagramIcon.vue";
 import LinkedinIcon from "../icons/LinkedinIcon.vue";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
@@ -89,7 +90,7 @@ const emailTemplateId = process.env.VUE_APP_EMAIL_TEMPLATE_ID;
 
 export default {
   name: "AppFooter",
-  components: { EmailIcon, FacebookIcon, LinkedinIcon, Loading },
+  components: { EmailIcon, InstagramIcon, LinkedinIcon, Loading },
 
   data() {
     return {
