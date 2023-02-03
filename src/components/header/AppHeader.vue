@@ -25,6 +25,7 @@
 						>
 							<instagram-icon />
 						</a>
+						<img class="header__socials-gif" src="/static/icons/mario.gif" alt="Icon" />
 					</div>
 
 					<v-btn class="mt-7" dark rounded color="#36B7FF" href="/static/arquivos/resume.pdf" target="_blank"
@@ -61,7 +62,18 @@ export default {
 	margin-top: 50px;
 	&__socials {
 		display: flex;
+		align-items: center;
 		gap: 20px;
+
+		a {
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__socials-gif {
+		max-width: 40px;
+		object-position: center;
+		margin-top: -15px;
 	}
 	&__title {
 		position: relative;
