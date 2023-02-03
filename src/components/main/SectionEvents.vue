@@ -2,7 +2,7 @@
 	<section class="section-events container">
 		<h3 class="text-center mb-15">Eventos e Apresentações</h3>
 
-		<div class="section-events__container-events" v-dragscroll>
+		<div class="section-events__container-events">
 			<div class="d-flex">
 				<img
 					@click="
@@ -40,10 +40,7 @@ export default {
 					description: "Evento 3",
 					url: "/static/eventos/3.jpeg",
 				},
-				{
-					description: "Evento 4",
-					url: "/static/eventos/4.jpeg",
-				},
+
 				{
 					description: "Evento 5",
 					url: "/static/eventos/5.jpeg",
@@ -59,10 +56,9 @@ export default {
 	&__container-events {
 		width: auto;
 		display: flex;
+		justify-content: center;
 
 		margin: 0 auto;
-
-		cursor: grab;
 
 		overflow-x: auto;
 		-ms-overflow-style: none; /* IE and Edge */
@@ -81,9 +77,9 @@ export default {
 			justify-content: center;
 		}
 
-		&:active {
-			cursor: grabbing;
-		}
+		// &:active {
+		// 	cursor: grabbing;
+		// }
 	}
 	&__image {
 		min-width: 400px;
