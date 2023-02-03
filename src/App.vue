@@ -50,10 +50,19 @@ export default {
 	min-height: 60px;
 	object-fit: cover;
 	position: absolute;
+
+	@media (max-width: 600px) {
+		max-width: 40px;
+		min-height: 40px;
+	}
 }
 .icon:nth-of-type(1) {
 	top: 20px;
 	left: 80px;
+
+	@media (max-width: 600px) {
+		left: 10px;
+	}
 }
 .icon:nth-of-type(2) {
 	top: 50%;
