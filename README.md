@@ -26,9 +26,11 @@
 </div>
 
 <h2>🖼️ Demonstração da aplicação</h2>
-<img margin-bottom="20px" src="src/assets/readme3.PNG">
+<img margin-bottom="20px" src="src/assets/mreadme1.PNG">
 <hr/>
-<img margin-bottom="20px" src="src/assets/readme2.PNG">
+<img margin-bottom="20px" src="src/assets/mreadme2.PNG">
+<hr/>
+<img margin-bottom="20px" src="src/assets/mreadme3.PNG">
 
 <h4  style="display: inline_block">Visualização no Figma :</h4><a style="display: inline_block" target="blank" href="https://www.figma.com/file/jdcVu1AMtxcaTEAOaiyWCu/portfolio?node-id=4%3A76">Preview no Figma</a>
 
