@@ -17,8 +17,9 @@
           <p class="mb-0">
             Sou uma pessoa que nunca se cansa de buscar conhecimentos novos, sempre estou disposto a ouvir e aprender
             com outras pessoas. Sendo um profissional que gosta do que faz e com isso busco me tornar cada vez melhor e
-            eficiente. Prezo mais pelo desenvolvimento pessoal, pois soft skills são mais difíceis de obter. Também
-            gosto de compartilhar meus conhecimentos e ser aquilo que eu precisava quando estava no começo.
+            eficiente.Sempre busco me atualizar nas tecnologias do mercado e nunca tenho o pensamento de ficar
+            estagnado,por isso,busco novos desafios que possam me levar para o próximo nível.Cresci com a tecnologia e
+            hoje faço dela a minha paixão.
           </p>
         </v-col>
       </v-row>

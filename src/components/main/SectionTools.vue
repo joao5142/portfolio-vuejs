@@ -2,33 +2,20 @@
   <section class="container section-tools">
     <h3 class="mb-10">Ferramentas e metodologias</h3>
 
-    <div
-      aria-label="Informações Adicionais - Legenda"
-      role="complementary"
-      class="d-flex justify-end mb-8"
-    >
+    <div aria-label="Informações Adicionais - Legenda" role="complementary" class="d-flex justify-md-end mb-8">
       <div>
         <h5 class="mb-2">Legenda</h5>
         <div role="contentInfo" class="d-flex flex-wrap">
           <div class="d-flex">
-            <div
-              class="section-tools__legend-ball --green"
-              title="Bola Legenda"
-            ></div>
+            <div class="section-tools__legend-ball --green" title="Bola Legenda"></div>
             Básico
           </div>
           <div class="d-flex mx-3">
-            <div
-              class="section-tools__legend-ball --orange"
-              title="Bola Legenda"
-            ></div>
+            <div class="section-tools__legend-ball --orange" title="Bola Legenda"></div>
             Intermédiario
           </div>
           <div class="d-flex">
-            <div
-              class="section-tools__legend-ball --red"
-              title="Bola Legenda"
-            ></div>
+            <div class="section-tools__legend-ball --red" title="Bola Legenda"></div>
             Avançado
           </div>
         </div>
@@ -41,13 +28,12 @@
       </v-tab>
 
       <v-tabs-items v-model="selectedTabTools">
-        <v-tab-item
-          v-for="(item, tabIndex) in toolsItems"
-          :key="'itemTab' + tabIndex"
-        >
+        <v-tab-item v-for="(item, tabIndex) in toolsItems" :key="'itemTab' + tabIndex">
           <v-row class="pa-4 section-tools__logos mt-2">
             <v-col
               class="d-flex align-center relative"
+              cols="12"
+              sm="6"
               md="4"
               lg="3"
               v-for="(logo, indexLogo) in item.itens"

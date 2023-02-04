@@ -1,14 +1,8 @@
 <template>
-  <div
-    class="recommendation"
-    aria-label="Recommendation"
-    :class="{ 'recommendation--blue': featured }"
-  >
-    {{ recommendation.message }}
+  <div class="recommendation" aria-label="Recommendation" :class="{ 'recommendation--blue': featured }">
+    <p>{{ recommendation.message }}</p>
 
-    <div
-      class="recommendation__box-avatar d-flex flex-column align-center justify-center"
-    >
+    <div class="recommendation__box-avatar d-flex flex-column align-center justify-center">
       <div class="recommendation__avatar">
         <img :src="recommendation.avatar" alt="avatar" />
       </div>
@@ -41,12 +35,14 @@ export default {
   border-radius: 10px;
   position: relative;
 
+  text-overflow: ellipsis;
+
   &--blue {
     background: $blue-3;
     color: white;
     margin-top: -80px;
 
-    @media (max-width: 996px) {
+    @media (max-width: 1280px) {
       margin-top: 0px;
     }
   }
