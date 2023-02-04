@@ -93,7 +93,7 @@ export default {
   left: 20px;
 
   @media (max-width: 500px) {
-    top: 32%;
+    top: 33%;
   }
 }
 .icon:nth-of-type(7) {
