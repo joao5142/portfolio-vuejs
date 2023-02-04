@@ -10,10 +10,7 @@
         :key="index + 'recommendation'"
         style="margin-bottom: 100px"
       >
-        <CardRecommendation
-          :featured="index == 1"
-          :recommendation="recommendation"
-        />
+        <CardRecommendation :featured="index == 1" :recommendation="recommendation" />
       </v-col>
     </v-row>
   </section>
@@ -45,11 +42,11 @@ export default {
           avatar: "/static/users/user2.jfif",
         },
         {
-          name: "Matheus Costa",
+          name: "Davi Guerra",
           position: "Desenvolvedor Back-end",
           message:
             "João é um cara extremamente competente, atencioso e prestativo. Desempenha um importante papel em nossa equipe e está sempre apto a aprender novos métodos e formas de trabalho, para melhorias nos processos.",
-          avatar: "/static/users/user3.jpg",
+          avatar: "/static/users/user3.jfif",
         },
       ],
       interval: null,
