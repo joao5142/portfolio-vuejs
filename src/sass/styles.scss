@@ -4,6 +4,7 @@
 * {
   font-family: Fira Sans, sans-serif;
 }
+
 h1 {
   font-size: $heading-1;
   margin: 0px;
@@ -49,17 +50,13 @@ body {
 }
 .v-application--is-ltr
   .v-tabs--align-with-title
-  > .v-tabs-bar:not(.v-tabs-bar--show-arrows):not(
-    .v-slide-group--is-overflowing
-  )
+  > .v-tabs-bar:not(.v-tabs-bar--show-arrows):not(.v-slide-group--is-overflowing)
   > .v-slide-group__wrapper
   > .v-tabs-bar__content
   > .v-tab:first-child,
 .v-application--is-ltr
   .v-tabs--align-with-title
-  > .v-tabs-bar:not(.v-tabs-bar--show-arrows):not(
-    .v-slide-group--is-overflowing
-  )
+  > .v-tabs-bar:not(.v-tabs-bar--show-arrows):not(.v-slide-group--is-overflowing)
   > .v-slide-group__wrapper
   > .v-tabs-bar__content
   > .v-tabs-slider-wrapper
@@ -70,9 +67,7 @@ body {
   padding-left: 0px !important;
 }
 .v-tabs:not(.v-tabs--vertical):not(.v-tabs--right)
-  > .v-slide-group--is-overflowing.v-tabs-bar--is-mobile:not(
-    .v-slide-group--has-affixes
-  )
+  > .v-slide-group--is-overflowing.v-tabs-bar--is-mobile:not(.v-slide-group--has-affixes)
   .v-slide-group__prev {
   display: none;
 }

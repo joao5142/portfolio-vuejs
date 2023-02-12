@@ -25,17 +25,17 @@
       </v-row>
     </section>
 
-    <section-academic-life v-scroll-reveal.reset />
+    <section-academic-life v-scroll-reveal />
     <section-project
-      v-scroll-reveal.reset
+      v-scroll-reveal
       @show-project="
         selectedProject = $event;
         isModalProjectOpen = true;
       "
     />
-    <section-events v-scroll-reveal.reset />
-    <section-tools v-scroll-reveal.reset />
-    <section-recommendations v-scroll-reveal.reset />
+    <section-events v-scroll-reveal />
+    <section-tools v-scroll-reveal />
+    <section-recommendations v-scroll-reveal />
 
     <ModalProject
       :modal-open="isModalProjectOpen"

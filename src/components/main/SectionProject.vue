@@ -7,12 +7,9 @@
         {{ tab.label }}
       </v-tab>
 
-      <v-tabs-items v-model="selectedTabProjects">
-        <v-tab-item
-          v-for="(item, tabIndex) in projectItems"
-          :key="'itemTab' + tabIndex"
-        >
-          <v-row class="mt-2 flex-wrap pa-2 py-4">
+      <v-tabs-items class="pb-4" v-model="selectedTabProjects">
+        <v-tab-item class="pb-4" v-for="(item, tabIndex) in projectItems" :key="'itemTab' + tabIndex">
+          <v-row :class="{ 'section-projects__container--show': !showMoreProjects }" class="mt-2 flex-wrap pa-2 py-4">
             <v-col
               cols="12"
               sm="6"
@@ -23,11 +20,7 @@
               :key="'cardIndex' + cardIndex"
               class="section-projects__col-card"
             >
-              <div
-                class="section-projects__card"
-                aria-label="Card Projeto"
-                title="Card Projeto"
-              >
+              <div class="section-projects__card" aria-label="Card Projeto" title="Card Projeto">
                 <v-img :src="card.image"></v-img>
 
                 <div>
@@ -41,6 +34,16 @@
               </div>
             </v-col>
           </v-row>
+          <v-btn
+            @click="showMoreProjects = !showMoreProjects"
+            v-if="tabIndex == 0"
+            class="me-3 mt-10 section-projects__button"
+            dark
+            rounded
+            color="#36B7FF"
+            ><v-icon>{{ !showMoreProjects ? " mdi-chevron-down" : "mdi-chevron-up" }}</v-icon>
+            {{ !showMoreProjects ? "Ver mais projetos" : "Esconder Projetos" }}</v-btn
+          >
         </v-tab-item>
       </v-tabs-items>
     </v-tabs>
@@ -55,10 +58,33 @@ export default {
       selectedTabProjects: 0,
       isModalProjectOpen: false,
 
+      showMoreProjects: false,
+
       projectItems: [
         {
           label: "Front-end",
           itens: [
+            {
+              title: "Kenai Movies",
+              image: "/static/projetos/9.png",
+              description: "Desenvolvido com VueJs",
+              url: "https://kenai.netlify.app/",
+              technologies: ["Html", "CSS", "Js"],
+            },
+            {
+              title: "Studio Ghibli",
+              image: "/static/projetos/8.png",
+              description: "Desenvolvido com Vanilla Js",
+              url: "https://studioghiblisite.netlify.app/",
+              technologies: ["Html", "CSS", "Js"],
+            },
+            {
+              title: "Windows 11",
+              image: "/static/projetos/7.png",
+              description: "Desenvolvido com Vanilla Js, utilizando conceitos de componetização com js puro.",
+              url: "https://windows11-clone-interface.netlify.app/",
+              technologies: ["Html", "CSS", "Js"],
+            },
             {
               title: "Naped",
               image: "/static/projetos/1.png",
@@ -113,7 +139,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.v-item-group.theme--light.v-tabs-items {
+  height: 50%;
+  overflow: hidden;
+}
 .section-projects {
+  &__container--show {
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+
+    overflow: hidden;
+
+    position: relative;
+
+    height: 700px;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 0px;
+    left: 51%;
+    transform: translateX(-50%);
+    text-transform: none;
+  }
+
   &__card {
     border-radius: $border-radius;
     box-shadow: $shadow;
