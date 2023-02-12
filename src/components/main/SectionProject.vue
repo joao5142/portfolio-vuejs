@@ -1,7 +1,7 @@
 <template>
   <section class="container section-projects">
     <h3>Projetos</h3>
-    <p class="mb-8">Total de projetos: 6</p>
+    <p class="mb-8">Total de projetos: {{ totalProjects }}</p>
     <v-tabs v-model="selectedTabProjects" align-with-title>
       <v-tab v-for="(tab, index) in projectItems" :key="'projectTab' + index">
         {{ tab.label }}
@@ -134,6 +134,15 @@ export default {
         { label: "Diversos", itens: [] },
       ],
     };
+  },
+  computed: {
+    totalProjects() {
+      let total = this.projectItems.reduce((acc, current) => {
+        return acc + current.itens.length;
+      }, 0);
+
+      return total;
+    },
   },
 };
 </script>
