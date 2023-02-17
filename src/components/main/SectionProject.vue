@@ -65,10 +65,19 @@ export default {
           label: "Front-end",
           itens: [
             {
+              title: "Jogo da velha",
+              image: "/static/projetos/10.png",
+              description: "Desenvolvido com Vanilla Js",
+              url: "https://main--jaotictactoe.netlify.app/",
+              github: "https://github.com/joao5142/tic-tac-toe",
+              technologies: ["Html", "CSS", "Js"],
+            },
+            {
               title: "Kenai Movies",
               image: "/static/projetos/9.png",
               description: "Desenvolvido com VueJs",
               url: "https://kenai.netlify.app/",
+              github: "https://github.com/joao5142/Kenai-Movies",
               technologies: ["Html", "CSS", "Js"],
             },
             {
@@ -76,13 +85,15 @@ export default {
               image: "/static/projetos/8.png",
               description: "Desenvolvido com Vanilla Js",
               url: "https://studioghiblisite.netlify.app/",
+              github: "https://github.com/joao5142/Studio-Ghibli-Landing-Page",
               technologies: ["Html", "CSS", "Js"],
             },
             {
               title: "Windows 11",
               image: "/static/projetos/7.png",
-              description: "Desenvolvido com Vanilla Js, utilizando conceitos de componetização com js puro.",
+              description: "Desenvolvido com Vanilla Js",
               url: "https://windows11-clone-interface.netlify.app/",
+              github: "https://github.com/joao5142/windows-clone",
               technologies: ["Html", "CSS", "Js"],
             },
             {
@@ -90,6 +101,7 @@ export default {
               image: "/static/projetos/1.png",
               description: "Desenvolvido com React e NextJs",
               url: "https://naped-animes.vercel.app/",
+              github: "https://github.com/joao5142/naped-animes",
               technologies: ["React", "NextJs", "Js", "Seo"],
             },
             {
@@ -97,6 +109,7 @@ export default {
               image: "/static/projetos/2.png",
               description: "Desenvolvido com React e NextJs",
               url: "https://loop-studios-landing-page-gamma.vercel.app/",
+              github: "https: '//github.com/joao5142/loop-studios-landing-page",
               technologies: ["React", "NextJs", "Js", "Bootstrap"],
             },
             {
@@ -104,6 +117,7 @@ export default {
               image: "/static/projetos/3.png",
               description: "Desenvolvido com Html,Css e Js",
               url: "https://lolmusicplayer.netlify.app/",
+              github: "https://github.com/joao5142/lol-music-player",
               technologies: ["Html", "BEM CSS", "WAI-ARIA", "Js", "DOM"],
             },
             {
@@ -111,6 +125,7 @@ export default {
               image: "/static/projetos/4.png",
               description: "Desenvolvido com React e NextJs",
               url: "https://fylolandingpagej.netlify.app/",
+              github: "https://github.com/joao5142/fylo-landing-page",
               technologies: ["React", "NextJs", "Js", "Bootstrap"],
             },
             {
@@ -118,6 +133,7 @@ export default {
               image: "/static/projetos/5.png",
               description: "Desenvolvido com React e NextJs",
               url: "https://frontendmentordesafio1.netlify.app/",
+              github: "https://github.com/joao5142/huddle-landing-page",
               technologies: ["React", "NextJs", "Js", "Bootstrap"],
             },
             {
@@ -125,6 +141,7 @@ export default {
               image: "/static/projetos/6.png",
               description: "Desenvolvido com VueJs",
               url: "https://desafiorachi.netlify.app/",
+              github: "https://github.com/joao5142/Rachi-Landing-Page",
               technologies: ["VueJs", "Js", "Bootstrap"],
             },
           ],
