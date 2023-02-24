@@ -67,7 +67,7 @@ export default {
             {
               title: "Jogo da velha",
               image: "/static/projetos/10.png",
-              description: "Desenvolvido com Vanilla Js",
+              description: "Desenvolvido com Vanilla Js|Typescript + Vite",
               url: "https://main--jaotictactoe.netlify.app/",
               github: "https://github.com/joao5142/tic-tac-toe",
               technologies: ["Html", "CSS", "Js"],
