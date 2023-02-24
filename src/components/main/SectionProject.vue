@@ -78,7 +78,7 @@ export default {
               description: "Desenvolvido com VueJs",
               url: "https://kenai.netlify.app/",
               github: "https://github.com/joao5142/Kenai-Movies",
-              technologies: ["Html", "CSS", "Js"],
+              technologies: ["Html", "CSS", "Js", "VueJs"],
             },
             {
               title: "Studio Ghibli",
@@ -120,6 +120,7 @@ export default {
               github: "https://github.com/joao5142/lol-music-player",
               technologies: ["Html", "BEM CSS", "WAI-ARIA", "Js", "DOM"],
             },
+
             {
               title: "Fylo",
               image: "/static/projetos/4.png",
@@ -127,6 +128,14 @@ export default {
               url: "https://fylolandingpagej.netlify.app/",
               github: "https://github.com/joao5142/fylo-landing-page",
               technologies: ["React", "NextJs", "Js", "Bootstrap"],
+            },
+            {
+              title: "Frontips",
+              image: "/static/projetos/11.png",
+              description: "Desenvolvido com React e NextJs",
+              url: "https://frontips-blog.vercel.app/",
+              github: "https://github.com/joao5142/frontips-blog",
+              technologies: ["React", "NextJs", "SASS", "Js"],
             },
             {
               title: "Huddle",
