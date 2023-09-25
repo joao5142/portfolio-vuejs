@@ -90,10 +90,10 @@ export default {
             {
               title: "Nft Shop",
               image: "/static/projetos/2.png",
-              description: "Desenvolvido com VueJs",
+              description: "Desenvolvido com React e Next Js",
               url: "",
               github: "https://github.com/joao5142/Kenai-Movies",
-              technologies: ["Html", "CSS", "Js", "Next", "Reat"],
+              technologies: ["Html", "CSS", "Js", "Next", "React"],
             },
 
             {
@@ -166,7 +166,10 @@ export default {
           ],
         },
         { label: "Back-end", itens: [] },
-        { label: "Fullstack", itens: [] },
+        {
+          label: "Fullstack",
+          itens: [],
+        },
         { label: "Diversos", itens: [] },
       ],
     };
