@@ -8,8 +8,15 @@
       </v-tab>
 
       <v-tabs-items class="pb-4" v-model="selectedTabProjects">
-        <v-tab-item class="pb-4" v-for="(item, tabIndex) in projectItems" :key="'itemTab' + tabIndex">
-          <v-row :class="{ 'section-projects__container--show': !showMoreProjects }" class="mt-2 flex-wrap pa-2 py-4">
+        <v-tab-item
+          class="pb-4"
+          v-for="(item, tabIndex) in projectItems"
+          :key="'itemTab' + tabIndex"
+        >
+          <v-row
+            :class="{ 'section-projects__container--show': !showMoreProjects }"
+            class="mt-2 flex-wrap pa-2 py-4"
+          >
             <v-col
               cols="12"
               sm="6"
@@ -20,7 +27,11 @@
               :key="'cardIndex' + cardIndex"
               class="section-projects__col-card"
             >
-              <div class="section-projects__card" aria-label="Card Projeto" title="Card Projeto">
+              <div
+                class="section-projects__card"
+                aria-label="Card Projeto"
+                title="Card Projeto"
+              >
                 <v-img :src="card.image"></v-img>
 
                 <div>
@@ -41,8 +52,12 @@
             dark
             rounded
             color="#36B7FF"
-            ><v-icon>{{ !showMoreProjects ? " mdi-chevron-down" : "mdi-chevron-up" }}</v-icon>
-            {{ !showMoreProjects ? "Ver mais projetos" : "Esconder Projetos" }}</v-btn
+            ><v-icon>{{
+              !showMoreProjects ? " mdi-chevron-down" : "mdi-chevron-up"
+            }}</v-icon>
+            {{
+              !showMoreProjects ? "Ver mais projetos" : "Esconder Projetos"
+            }}</v-btn
           >
         </v-tab-item>
       </v-tabs-items>
@@ -66,36 +81,21 @@ export default {
           itens: [
             {
               title: "Jogo da velha",
-              image: "/static/projetos/10.png",
+              image: "/static/projetos/5.png",
               description: "Desenvolvido com Vanilla Js|Typescript + Vite",
               url: "https://main--jaotictactoe.netlify.app/",
               github: "https://github.com/joao5142/tic-tac-toe",
               technologies: ["Html", "CSS", "Js"],
             },
             {
-              title: "Kenai Movies",
-              image: "/static/projetos/9.png",
+              title: "Nft Shop",
+              image: "/static/projetos/2.png",
               description: "Desenvolvido com VueJs",
-              url: "https://kenai.netlify.app/",
+              url: "",
               github: "https://github.com/joao5142/Kenai-Movies",
-              technologies: ["Html", "CSS", "Js", "VueJs"],
+              technologies: ["Html", "CSS", "Js", "Next", "Reat"],
             },
-            {
-              title: "Studio Ghibli",
-              image: "/static/projetos/8.png",
-              description: "Desenvolvido com Vanilla Js",
-              url: "https://studioghiblisite.netlify.app/",
-              github: "https://github.com/joao5142/Studio-Ghibli-Landing-Page",
-              technologies: ["Html", "CSS", "Js"],
-            },
-            {
-              title: "Windows 11",
-              image: "/static/projetos/7.png",
-              description: "Desenvolvido com Vanilla Js",
-              url: "https://windows11-clone-interface.netlify.app/",
-              github: "https://github.com/joao5142/windows-clone",
-              technologies: ["Html", "CSS", "Js"],
-            },
+
             {
               title: "Naped",
               image: "/static/projetos/1.png",
@@ -104,14 +104,23 @@ export default {
               github: "https://github.com/joao5142/naped-animes",
               technologies: ["React", "NextJs", "Js", "Seo"],
             },
+
             {
-              title: "Loopstudios",
-              image: "/static/projetos/2.png",
+              title: "Invoices",
+              image: "/static/projetos/8.png",
               description: "Desenvolvido com React e NextJs",
-              url: "https://loop-studios-landing-page-gamma.vercel.app/",
-              github: "https: '//github.com/joao5142/loop-studios-landing-page",
-              technologies: ["React", "NextJs", "Js", "Bootstrap"],
+              url: "",
+              github: "https://github.com/joao5142/invoices",
+              technologies: [
+                "React",
+                "NextJs",
+                "Js",
+                "Styled components",
+                "React hook form",
+                "Yup",
+              ],
             },
+
             {
               title: "Lol Music Player",
               image: "/static/projetos/3.png",
@@ -122,36 +131,37 @@ export default {
             },
 
             {
-              title: "Fylo",
-              image: "/static/projetos/4.png",
-              description: "Desenvolvido com React e NextJs",
-              url: "https://fylolandingpagej.netlify.app/",
-              github: "https://github.com/joao5142/fylo-landing-page",
-              technologies: ["React", "NextJs", "Js", "Bootstrap"],
-            },
-            {
-              title: "Frontips",
-              image: "/static/projetos/11.png",
-              description: "Desenvolvido com React e NextJs",
-              url: "https://frontips-blog.vercel.app/",
-              github: "https://github.com/joao5142/frontips-blog",
-              technologies: ["React", "NextJs", "SASS", "Js"],
-            },
-            {
               title: "Huddle",
-              image: "/static/projetos/5.png",
+              image: "/static/projetos/4.png",
               description: "Desenvolvido com React e NextJs",
               url: "https://frontendmentordesafio1.netlify.app/",
               github: "https://github.com/joao5142/huddle-landing-page",
-              technologies: ["React", "NextJs", "Js", "Bootstrap"],
+              technologies: ["React", "NextJs", "Js", "Scss"],
             },
+
             {
-              title: "Rachi",
+              title: "Coffee Delivery",
               image: "/static/projetos/6.png",
-              description: "Desenvolvido com VueJs",
-              url: "https://desafiorachi.netlify.app/",
-              github: "https://github.com/joao5142/Rachi-Landing-Page",
-              technologies: ["VueJs", "Js", "Bootstrap"],
+              description: "Desenvolvido com React e NextJs",
+              url: "https://coffee-delivery-cfg7r9ntg-joao5142.vercel.app/",
+              github: "https://github.com/joao5142/coffee-delivery",
+              technologies: [
+                "React",
+                "NextJs",
+                "Js",
+                "Styled components",
+                "Zod",
+                "React hook form",
+              ],
+            },
+
+            {
+              title: "Dt money",
+              image: "/static/projetos/7.png",
+              description: "Desenvolvido com React e NextJs",
+              url: "https://dt-money-joao5142.vercel.app/",
+              github: "https://github.com/joao5142/dt-money",
+              technologies: ["React", "NextJs", "Js", "Zod", "React hook form"],
             },
           ],
         },

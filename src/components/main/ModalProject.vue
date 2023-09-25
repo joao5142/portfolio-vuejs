@@ -3,7 +3,13 @@
     <div class="position-relative">
       <v-img :src="project?.image ?? ''" class="pa-4" min-height="300px">
         <div class="d-flex justify-end">
-          <v-btn @click="$emit('close-modal')" class="ms-3" small fab color="#FF3C3C">
+          <v-btn
+            @click="$emit('close-modal')"
+            class="ms-3"
+            small
+            fab
+            color="#FF3C3C"
+          >
             <v-icon color="#fff"> mdi-close </v-icon>
           </v-btn>
         </div>
@@ -19,13 +25,31 @@
             </p>
             <h5 class="mt-8 pb-2">Tecnologias e Conhecimentos</h5>
             <ul class="d-flex flex-wrap mt-3">
-              <li v-for="(technologie, index) in project?.technologies" :key="index + 'technologie'">
+              <li
+                v-for="(technologie, index) in project?.technologies"
+                :key="index + 'technologie'"
+              >
                 {{ technologie }}
               </li>
             </ul>
 
-            <v-btn class="me-3 mt-10" dark rounded color="#36B7FF" @click="viewProject">Acessar site</v-btn>
-            <v-btn class="me-3 mt-10" dark rounded color="#36B7FF" @click="viewGithub">Acessar github</v-btn>
+            <v-btn
+              v-if="project.site"
+              class="me-3 mt-10"
+              dark
+              rounded
+              color="#36B7FF"
+              @click="viewProject"
+              >Acessar site</v-btn
+            >
+            <v-btn
+              class="me-3 mt-10"
+              dark
+              rounded
+              color="#36B7FF"
+              @click="viewGithub"
+              >Acessar github</v-btn
+            >
           </div>
         </div>
       </div>
