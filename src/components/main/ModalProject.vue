@@ -34,7 +34,7 @@
             </ul>
 
             <v-btn
-              v-if="project.site"
+              v-if="project.url"
               class="me-3 mt-10"
               dark
               rounded

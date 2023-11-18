@@ -80,6 +80,40 @@ export default {
           label: "Front-end",
           itens: [
             {
+              title: "Facebook Clone",
+              image: "/static/projetos/10.png",
+              description: "Desenvolvido com Vue e Nuxt",
+              url: "https://facebook-front-roan.vercel.app/auth/login",
+              github: "https://github.com/joao5142/facebook-front",
+              technologies: ["Vue", "Ts", "Nuxt", "Pinia", "SASS"],
+            },
+
+            {
+              title: "Twitter Clone",
+              image: "/static/projetos/9.png",
+              description: "Desenvolvido com Vue e Nuxt",
+              url: "https://twitter-front-two.vercel.app/",
+              github: "https://github.com/joao5142/twitter-front",
+              technologies: [
+                "Vue",
+                "Ts",
+                "Nuxt",
+                "Pinia",
+                "Vitest",
+                "Storybook",
+                "SASS",
+              ],
+            },
+
+            {
+              title: "Ibook",
+              image: "/static/projetos/11.png",
+              description: "Desenvolvido com Vue e Nuxt",
+              url: "https://ibook-lemon.vercel.app/",
+              github: "https://github.com/joao5142/ibook",
+              technologies: ["Vue", "Ts", "Nuxt", "Vuex", "Axios"],
+            },
+            {
               title: "Jogo da velha",
               image: "/static/projetos/5.png",
               description: "Desenvolvido com Vanilla Js|Typescript + Vite",
