@@ -106,6 +106,15 @@ export default {
             },
 
             {
+              title: "God of war ragnarok",
+              image: "/static/projetos/12.png",
+              description: "Desenvolvido com Next + Stitches",
+              url: "https://god-of-war-ragnarok-theta.vercel.app/",
+              github: "https://github.com/joao5142/god-of-war-ragnarok",
+              technologies: ["React", "Ts", "Stitches", "Next", "Keen Slider"],
+            },
+
+            {
               title: "Ibook",
               image: "/static/projetos/11.png",
               description: "Desenvolvido com Vue e Nuxt",
